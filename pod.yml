@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    app: myapp
+  namespace: testns
+spec:
+  containers:
+    - name: nsnginx
+      image: ngix:latest
+      ports:
+        - name: nsnginxport
+          containerPort: 80
+          protocol: TCP
